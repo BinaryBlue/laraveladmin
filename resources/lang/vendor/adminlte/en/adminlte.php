@@ -2,7 +2,8 @@
 
 return [
 
-    'full_name'                   => 'Full name',
+    'full_name'                   => 'Your Name',
+    'mobile'                      => 'Mobile Number (Without +880)',
     'email'                       => 'Email',
     'password'                    => 'Password',
     'retype_password'             => 'Retype password',

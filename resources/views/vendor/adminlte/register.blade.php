@@ -47,7 +47,7 @@
                         </div>
                     @endif
                 </div>
-                <div class="input-group mb-3">
+                <!--div class="input-group mb-3">
                     <input type="email" name="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" value="{{ old('email') }}"
                            placeholder="{{ __('adminlte::adminlte.email') }}">
                     <div class="input-group-append">
@@ -58,6 +58,20 @@
                     @if ($errors->has('email'))
                         <div class="invalid-feedback">
                             <strong>{{ $errors->first('email') }}</strong>
+                        </div>
+                    @endif
+                </div-->
+                <div class="input-group mb-3">
+                    <input type="mobile" name="mobile" class="form-control {{ $errors->has('mobile') ? 'is-invalid' : '' }}" value="{{ old('mobile') }}"
+                           placeholder="{{ __('adminlte::adminlte.mobile') }}">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                        </div>
+                    </div>
+                    @if ($errors->has('mobile'))
+                        <div class="invalid-feedback">
+                            <strong>{{ $errors->first('mobile') }}</strong>
                         </div>
                     @endif
                 </div>

@@ -38,7 +38,7 @@
                 <p class="login-box-msg">{{ __('adminlte::adminlte.login_message') }}</p>
                 <form action="{{ $login_url }}" method="post">
                     {{ csrf_field() }}
-                    <div class="input-group mb-3">
+                    <!--div class="input-group mb-3">
                         <input type="email" name="email" class="form-control {{ $errors->has('email') ? 'is-invalid' : '' }}" value="{{ old('email') }}" placeholder="{{ __('adminlte::adminlte.email') }}" autofocus>
                         <div class="input-group-append">
                             <div class="input-group-text">
@@ -48,6 +48,19 @@
                         @if ($errors->has('email'))
                             <div class="invalid-feedback">
                                 {{ $errors->first('email') }}
+                            </div>
+                        @endif
+                    </div-->
+                    <div class="input-group mb-3">
+                        <input type="mobile" name="mobile" class="form-control {{ $errors->has('mobile') ? 'is-invalid' : '' }}" value="{{ old('mobile') }}" placeholder="{{ __('adminlte::adminlte.mobile') }}" autofocus>
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                        @if ($errors->has('mobile'))
+                            <div class="invalid-feedback">
+                                {{ $errors->first('mobile') }}
                             </div>
                         @endif
                     </div>
@@ -78,11 +91,11 @@
                         </div>
                     </div>
                 </form>
-                <p class="mt-2 mb-1">
+                <!--p class="mt-2 mb-1">
                     <a href="{{ $password_reset_url }}">
                         {{ __('adminlte::adminlte.i_forgot_my_password') }}
                     </a>
-                </p>
+                </p-->
                 @if ($register_url)
                     <p class="mb-0">
                         <a href="{{ $register_url }}">
@@ -90,6 +103,8 @@
                         </a>
                     </p>
                 @endif
+                <button type="button" class="btn btn-block btn-info">Mission</button>
+                <button type="button" class="btn btn-block btn-success">Vision</button>
             </div>
         </div>
     </div>
