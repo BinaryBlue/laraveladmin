@@ -215,7 +215,25 @@ return [
         //     'topnav' => false,
         // ],
         [
+            'text'    => 'Investors',
+            'role'    => 'admin',
+            'icon'    => 'fas fa-fw fa-money-bill',
+            'submenu' => [
+                [
+                    'text' => 'Create Investor',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-money-bill-alt',
+                ],
+                [
+                    'text' => 'List of Investor',
+                    'url'  => '#',
+                    'icon'    => 'fas fa-fw fa-money-bill-wave',
+                ],
+            ],
+        ],
+        [
             'text'    => 'Balance',
+            'role'    => 'investor',
             'icon'    => 'fas fa-fw fa-money-bill',
             'submenu' => [
                 [
@@ -242,6 +260,7 @@ return [
         ],
         [
             'text'    => 'Investment',
+            'role'    => 'investor',
             'icon'    => 'fas fa-fw fa-briefcase-medical',
             'submenu' => [
                 [
@@ -257,7 +276,7 @@ return [
             ],
         ],
         // [
-        //     'text'    => 'Earning',
+        //     'text'    => 'Earning', 'role'    => 'investor',
         //     'icon'    => 'fas fa-fw fa-briefcase-medical',
         //     'submenu' => [
         //         [
@@ -278,7 +297,7 @@ return [
         //     ]
         // ],
         // [
-        //     'text'    => 'Report',
+        //     'text'    => 'Report', 'role'    => 'investor',
         //     'icon'    => 'fas fa-fw fa-briefcase-medical',
         //     'submenu' => [
         //         [
@@ -299,7 +318,7 @@ return [
         //     ],
         // ],
         // [
-        //     'text'    => 'Refer a Friend',
+        //     'text'    => 'Refer a Friend', 'role'    => 'investor',
         //     'icon'    => 'fas fa-fw fa-briefcase-medical',
         //     'submenu' => [
         //         [

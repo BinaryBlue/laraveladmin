@@ -146,7 +146,8 @@
             <div class="sidebar">
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column {{config('adminlte.classes_sidebar_nav', '')}}" data-widget="treeview" role="menu" @if(config('adminlte.sidebar_nav_animation_speed') != 300) data-animation-speed="{{config('adminlte.sidebar_nav_animation_speed')}}" @endif @if(!config('adminlte.sidebar_nav_accordion')) data-accordion="false" @endif>
-                        @each('adminlte::partials.menu-item', $adminlte->menu(), 'item')
+                        
+                        @each('adminlte::partials.menu-item', remove_item_that_not_match($adminlte->menu(),'role',Auth::user()->roles[0]->name), 'item')
                     </ul>
                 </nav>
             </div>

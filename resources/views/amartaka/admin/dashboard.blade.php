@@ -15,9 +15,9 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>0</h3>
+                <h3>{{ $total_investor }}</h3>
 
-                <p>Current Balance</p>
+                <p>Total Investors</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -32,7 +32,7 @@
               <div class="inner">
                 <h3>0</h3>
 
-                <p>Earning</p>
+                <p>Total Investments</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -47,7 +47,7 @@
               <div class="inner">
                 <h3>0</h3>
 
-                <p>Referral Income</p>
+                <p>Total Withdrawl</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -62,7 +62,7 @@
               <div class="inner">
                 <h3>0</h3>
 
-                <p>Invested Projects</p>
+                <p>Total Active Projects</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -80,7 +80,7 @@
 @stop
 
 @section('css')
-  <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin_custom.css')}}">
 @stop
 
 @section('js')

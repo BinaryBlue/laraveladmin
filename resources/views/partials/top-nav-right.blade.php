@@ -3,25 +3,36 @@
       <img src="{{ asset('amartaka/propics/propic.jpg') }}" class="user-image" alt="User Image">
       <span class="hidden-xs">{{ Auth::user()->name }}</span>
     </a>
+    @hasrole('investor')
     <div class="progress progress-xs">
         <div class="sixty progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
           <span class="sr-only">60% Complete (warning)</span>
         </div>
     </div>
+    @endhasrole
     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
       <!-- User image -->
-      <li class="user-header sixty">
+        @hasrole('investor')
+            <li class="user-header sixty">
+        @else
+        <li class="user-header">
+        @endhasrole
         <img src="{{ asset('amartaka/propics/propic.jpg') }}" class="img-circle" alt="User Image">
 
         <p>
             {{ Auth::user()->name }}
-          <small>Profile Completed 60%</small>
+            @hasrole('investor')
+                <small>Profile Completed 60%</small>
+            @endhasrole
         </p>
-        <div class="progress progress-xs">
-            <div class="insider progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-              <span class="sr-only">60% Complete (warning)</span>
+        @hasrole('investor')
+            <div class="progress progress-xs">
+                <div class="insider progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                <span class="sr-only">60% Complete (warning)</span>
+                </div>
             </div>
-        </div>
+        @endhasrole
+       
       </li>
       <!-- Menu Footer-->
       <li class="user-footer">
