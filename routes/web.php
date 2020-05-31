@@ -22,14 +22,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/coderunner/{program}/{param1}/{param2}','CodeRunner@index');
 
-Route::get('/patient/create', 'PatientController@create');
-Route::get('/patient/all', 'PatientController@all');
-Route::get('/patient/id/1', 'PatientController@single');
+Route::get('/dashboard', 'DashboardController@index');
 
-Route::get('/doctor/create', 'DoctorController@create');
-Route::get('/doctor/all', 'DoctorController@all');
-Route::get('/doctor/id/1', 'DoctorController@single');
+Route::get('/balance/add', 'BalanceController@add');
+Route::get('/balance/withdraw', 'BalanceController@withdraw');
+Route::get('/balance/balance_history', 'BalanceController@balance_history');
+Route::get('/balance/withdraw_history', 'BalanceController@withdraw_history');
+
+
+Route::get('/investment/add', 'InvestmentController@add');
+Route::get('/investment/active', 'InvestmentController@active');
 
 

@@ -167,7 +167,7 @@ return [
 
     'use_route_url' => false,
 
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'dashboard',
 
     'logout_url' => 'logout',
 
@@ -179,7 +179,7 @@ return [
 
     'password_email_url' => 'password/email',
 
-    'profile_url' => false,
+    'profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -207,54 +207,118 @@ return [
     |
     */
 
-    'menu' => [
+    'menu' => 
+    [
+        // [
+        //     'text' => 'search',
+        //     'search' => false,
+        //     'topnav' => false,
+        // ],
         [
-            'text' => 'search',
-            'search' => true,
-            'topnav' => true,
-        ],
-        [
-            'text'    => 'Patients Profile',
-            'icon'    => 'fas fa-fw fa-user-injured',
+            'text'    => 'Balance',
+            'icon'    => 'fas fa-fw fa-money-bill',
             'submenu' => [
                 [
-                    'text' => 'Patient Entry',
-                    'url'  => 'patient/create',
-                    'icon'    => 'fas fa-fw fa-user-edit',
+                    'text' => 'Add Balance',
+                    'url'  => 'balance/add',
+                    'icon'    => 'fas fa-fw fa-money-bill-alt',
                 ],
                 [
-                    'text' => 'Patient Database',
-                    'url'  => 'patient/all',
-                    'icon'    => 'fas fa-fw fa-database',
+                    'text' => 'Withdraw Balance',
+                    'url'  => 'balance/withdraw',
+                    'icon'    => 'fas fa-fw fa-money-bill-wave',
                 ],
                 [
-                    'text' => 'Single Patient',
-                    'url'  => 'patient/id/1',
-                    'icon'    => 'fas fa-fw fa-user',
+                    'text' => 'Balance Add History',
+                    'url'  => 'balance/balance_history',
+                    'icon'    => 'fas fa-fw fa-file-archive',
+                ],
+                [
+                    'text' => 'Balance Withdraw History',
+                    'url'  => 'balance/withdraw_history',
+                    'icon'    => 'fas fa-fw fa-file-archive',
                 ],
             ],
         ],
         [
-            'text'    => 'Doctors Profile',
+            'text'    => 'Investment',
             'icon'    => 'fas fa-fw fa-briefcase-medical',
             'submenu' => [
                 [
-                    'text' => 'Doctor Entry',
-                    'url'  => 'doctor/create',
+                    'text' => 'Purchase Share',
+                    'url'  => 'investment/add',
                     'icon'    => 'fas fa-fw fa-user-edit',
                 ],
                 [
-                    'text' => 'Doctor Database',
-                    'url'  => 'doctor/all',
-                    'icon'    => 'fas fa-fw fa-database',
-                ],
-                [
-                    'text' => 'Single Doctor',
-                    'url'  => 'doctor/id/1',
-                    'icon'    => 'fas fa-fw fa-user',
+                    'text' => 'Active Projects',
+                    'url'  => 'investment/active',
+                    'icon'    => 'fas fa-fw fa-user-edit',
                 ],
             ],
         ],
+        // [
+        //     'text'    => 'Earning',
+        //     'icon'    => 'fas fa-fw fa-briefcase-medical',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Doctor Entry',
+        //             'url'  => 'doctor/create',
+        //             'icon'    => 'fas fa-fw fa-user-edit',
+        //         ],
+        //         [
+        //             'text' => 'Doctor Database',
+        //             'url'  => 'doctor/all',
+        //             'icon'    => 'fas fa-fw fa-database',
+        //         ],
+        //         [
+        //             'text' => 'Single Doctor',
+        //             'url'  => 'doctor/id/1',
+        //             'icon'    => 'fas fa-fw fa-user',
+        //         ],
+        //     ]
+        // ],
+        // [
+        //     'text'    => 'Report',
+        //     'icon'    => 'fas fa-fw fa-briefcase-medical',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Doctor Entry',
+        //             'url'  => 'doctor/create',
+        //             'icon'    => 'fas fa-fw fa-user-edit',
+        //         ],
+        //         [
+        //             'text' => 'Doctor Database',
+        //             'url'  => 'doctor/all',
+        //             'icon'    => 'fas fa-fw fa-database',
+        //         ],
+        //         [
+        //             'text' => 'Single Doctor',
+        //             'url'  => 'doctor/id/1',
+        //             'icon'    => 'fas fa-fw fa-user',
+        //         ],
+        //     ],
+        // ],
+        // [
+        //     'text'    => 'Refer a Friend',
+        //     'icon'    => 'fas fa-fw fa-briefcase-medical',
+        //     'submenu' => [
+        //         [
+        //             'text' => 'Doctor Entry',
+        //             'url'  => 'doctor/create',
+        //             'icon'    => 'fas fa-fw fa-user-edit',
+        //         ],
+        //         [
+        //             'text' => 'Doctor Database',
+        //             'url'  => 'doctor/all',
+        //             'icon'    => 'fas fa-fw fa-database',
+        //         ],
+        //         [
+        //             'text' => 'Single Doctor',
+        //             'url'  => 'doctor/id/1',
+        //             'icon'    => 'fas fa-fw fa-user',
+        //         ],
+        //     ],
+        // ],
     ],
 
     /*
